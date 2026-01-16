@@ -76,6 +76,12 @@ main {
     font-size: 1.8rem;
 }
 
+.category-icon-img {
+    width: 1.8rem;
+    height: 1.8rem;
+    object-fit: contain;
+}
+
 .category h2 {
     font-size: 1.5rem;
     color: var(--primary-color);
