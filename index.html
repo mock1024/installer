@@ -3,43 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的静态网站</title>
+    <title>软件下载中心</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>欢迎来到我的网站</h1>
-            <p class="subtitle">一个简洁美观的静态网站</p>
+            <h1>📥 软件下载中心</h1>
+            <p class="subtitle">收银软件与工具一键下载</p>
         </header>
 
         <main>
-            <section class="card">
-                <h2>关于这个网站</h2>
-                <p>这是一个使用 HTML、CSS 和 JavaScript 构建的现代化静态网站。它托管在 GitHub Pages 上，可以随时随地访问。</p>
+            <!-- 收银软件 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">🖥️</span>
+                    <h2>收银软件</h2>
+                </div>
+
+                <!-- 诚意云 -->
+                <div class="software-group">
+                    <h3>诚意云</h3>
+                    <div class="download-grid">
+                        <a href="https://oss-img.fuioupay.com/scte/INSTALL_PACKAGE/FuioupayTouch-hcy5.8.2.exe" class="download-card">
+                            <span class="card-icon">🪟</span>
+                            <span class="card-title">诚意云 Win版</span>
+                            <span class="card-version">v5.8.2</span>
+                        </a>
+                        <a href="https://oss-img.fuioupay.com/scte/INSTALL_PACKAGE/hcysaas-mq6.9.4.apk" class="download-card">
+                            <span class="card-icon">📱</span>
+                            <span class="card-title">诚意云 安卓版</span>
+                            <span class="card-version">v6.9.4</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 明献零售 -->
+                <div class="software-group">
+                    <h3>明献零售</h3>
+                    <div class="download-grid">
+                        <a href="https://oss-img.fuioupay.com/scte/INSTALL_PACKAGE/FuioupayTouch-wsy5.8.2.exe" class="download-card">
+                            <span class="card-icon">🪟</span>
+                            <span class="card-title">明献零售 Win版</span>
+                            <span class="card-version">v5.8.2</span>
+                        </a>
+                        <a href="https://oss-img.fuioupay.com/scte/INSTALL_PACKAGE/mxls-android6.9.1.apk" class="download-card">
+                            <span class="card-icon">📱</span>
+                            <span class="card-title">明献零售 安卓版</span>
+                            <span class="card-version">v6.9.1</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 思迅天店 -->
+                <div class="software-group">
+                    <h3>思迅天店</h3>
+                    <a href="https://www.td365.com.cn/download" class="download-card external-link">
+                        <span class="card-icon">🔗</span>
+                        <span class="card-title">访问官网下载</span>
+                        <span class="card-version">td365.com.cn</span>
+                    </a>
+                </div>
+
+                <!-- 银豹 -->
+                <div class="software-group">
+                    <h3>银豹</h3>
+                    <a href="https://www.pospal.cn/downcenter.aspx" class="download-card external-link">
+                        <span class="card-icon">🔗</span>
+                        <span class="card-title">访问下载中心</span>
+                        <span class="card-version">pospal.cn</span>
+                    </a>
+                </div>
+
+                <!-- 聚商荟 -->
+                <div class="software-group">
+                    <h3>聚商荟</h3>
+                    <a href="https://pdw-its.paidui.com/%E8%81%9A%E5%95%86%E8%8D%9F%E4%B8%B4%E6%97%B6%E5%AE%89%E8%A3%85%E5%8C%85/6.1.8%E5%AE%89%E8%A3%85%E5%8C%85/EPOS.Setup.v6.1.8.exe" class="download-card">
+                        <span class="card-icon">🪟</span>
+                        <span class="card-title">聚商荟</span>
+                        <span class="card-version">v6.1.8</span>
+                    </a>
+                </div>
+
+                <!-- 惠管家 -->
+                <div class="software-group">
+                    <h3>惠管家</h3>
+                    <a href="https://www.smartpos.top/download/DownloadStand.html" class="download-card external-link">
+                        <span class="card-icon">🔗</span>
+                        <span class="card-title">访问官网下载</span>
+                        <span class="card-version">smartpos.top</span>
+                    </a>
+                </div>
             </section>
 
-            <section class="card">
-                <h2>特点</h2>
-                <ul class="feature-list">
-                    <li>🚀 快速加载</li>
-                    <li>📱 响应式设计</li>
-                    <li>🎨 简洁美观</li>
-                    <li>💻 免费 GitHub Pages 托管</li>
-                </ul>
+            <!-- 科脉云帆 - 上位机软件 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">⚖️</span>
+                    <h2>科脉云帆 - 上位机软件</h2>
+                </div>
+                <div class="download-grid">
+                    <a href="https://cp.51fubei.com/tl/labelscale/dingjian.exe" class="download-card">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">顶尖</span>
+                    </a>
+                    <a href="https://cp.51fubei.com/tl/labelscale/tuoliduo.exe" class="download-card">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">托利多</span>
+                    </a>
+                    <a href="https://cp.51fubei.com/tl/labelscale/digi.exe" class="download-card">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">寺冈</span>
+                    </a>
+                    <a href="https://cp.51fubei.com/tl/labelscale/best.exe" class="download-card">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">佰仕特</span>
+                    </a>
+                    <a href="https://cp.51fubei.com/tl/labelscale/dahua.exe" class="download-card">
+                        <span class="card-icon">🔧</span>
+                        <span class="card-title">大华</span>
+                    </a>
+                </div>
             </section>
 
-            <section class="card">
-                <h2>当前时间</h2>
-                <p id="current-time">加载中...</p>
+            <!-- 工具 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">🛠️</span>
+                    <h2>工具</h2>
+                </div>
+                <div class="download-grid">
+                    <a href="https://cp.51fubei.com/tl/sun.exe" class="download-card">
+                        <span class="card-icon">☀️</span>
+                        <span class="card-title">向日葵</span>
+                    </a>
+                    <a href="https://cp.51fubei.com/software/pos%E4%B8%87%E8%83%BD%E6%89%93%E5%8D%B0%E6%9C%BA%E9%A9%B1%E5%8A%A8.exe" class="download-card">
+                        <span class="card-icon">🖨️</span>
+                        <span class="card-title">POS打印机驱动</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 本地文件 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">📁</span>
+                    <h2>本地文件</h2>
+                </div>
+                <div class="local-files">
+                    <p>📂 software 文件夹内包含：</p>
+                    <ul>
+                        <li>WinRAR 安装包</li>
+                        <li>科脉安装包</li>
+                    </ul>
+                </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 我的静态网站 | 使用 GitHub Pages 托管</p>
+            <p>&copy; 2026 软件下载中心 | 如有问题请联系技术支持</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
