@@ -287,6 +287,26 @@ main {
     border-color: var(--secondary-color);
 }
 
+/* 下载提示 */
+.download-note {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(245, 158, 11, 0.1);
+    border-left: 3px solid #f59e0b;
+    border-radius: 4px;
+}
+
+.download-note p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.download-note strong {
+    color: #f59e0b;
+}
+
 /* 本地文件 */
 .local-files {
     padding: 1rem 1.5rem;
