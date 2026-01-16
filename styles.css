@@ -101,6 +101,52 @@ main {
     color: var(--text-secondary);
     margin-bottom: 0.75rem;
     padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 手机端二维码图标 */
+.mobile-qr-icon {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.mobile-qr-icon:hover {
+    transform: scale(1.1);
+}
+
+.qr-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+.qr-tooltip img {
+    width: 150px;
+    height: 150px;
+    display: block;
+}
+
+.mobile-qr-icon:hover .qr-tooltip {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0.75rem;
 }
 
 /* 下载网格 */
@@ -135,6 +181,12 @@ main {
 
 .card-icon {
     font-size: 2rem;
+}
+
+.card-icon-img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
 }
 
 .card-title {
