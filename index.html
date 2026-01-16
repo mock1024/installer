@@ -7,9 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
     <div class="container">
         <header>
-            <h1>📥 软件下载中心</h1>
+            <h1>
+                <span class="header-icon">📥</span>
+                <span class="header-text">软件下载中心</span>
+            </h1>
             <p class="subtitle">收银软件与工具一键下载</p>
         </header>
 
@@ -71,6 +77,33 @@
                     </div>
                 </div>
 
+                <!-- 科脉云帆 -->
+                <div class="software-group">
+                    <h3>科脉云帆</h3>
+                    <div class="download-grid">
+                        <a href="https://download.kemai.com.cn/kpos/release/2.1.2/kpos_2025.10.27_prod_2.1.2.0.25102701%20.apk?version=1768428000507" class="download-card">
+                            <span class="card-icon">📱</span>
+                            <span class="card-title">Android收银</span>
+                            <span class="card-version">v2.1.2</span>
+                        </a>
+                        <a href="https://download.kemai.com.cn/kpos/release/2.1.2/CloudPOS%20V2.1.2.0.25110401.exe?version=1768428000516" class="download-card">
+                            <span class="card-icon">🪟</span>
+                            <span class="card-title">Windows收银</span>
+                            <span class="card-version">v2.1.2</span>
+                        </a>
+                        <a href="https://yunfan-store.kemai.com.cn/download/BalanceSetup/BalanceSetup.1.9.8.msi" class="download-card">
+                            <span class="card-icon">⚖️</span>
+                            <span class="card-title">传秤工具</span>
+                            <span class="card-version">v1.9.8</span>
+                        </a>
+                        <a href="https://yunfan-store.kemai.com.cn/download/PriceTagSetup/PriceTagSetup.2.0.2.msi" class="download-card">
+                            <span class="card-icon">🏷️</span>
+                            <span class="card-title">价签打印</span>
+                            <span class="card-version">v2.0.2</span>
+                        </a>
+                    </div>
+                </div>
+
                 <!-- 思迅天店 -->
                 <div class="software-group">
                     <h3>思迅天店</h3>
@@ -99,33 +132,6 @@
                         <span class="card-title">聚商荟</span>
                         <span class="card-version">v6.1.8</span>
                     </a>
-                </div>
-
-                <!-- 科脉云帆 -->
-                <div class="software-group">
-                    <h3>科脉云帆</h3>
-                    <div class="download-grid">
-                        <a href="https://download.kemai.com.cn/kpos/release/2.1.2/kpos_2025.10.27_prod_2.1.2.0.25102701%20.apk?version=1768428000507" class="download-card">
-                            <span class="card-icon">📱</span>
-                            <span class="card-title">Android收银</span>
-                            <span class="card-version">v2.1.2</span>
-                        </a>
-                        <a href="https://download.kemai.com.cn/kpos/release/2.1.2/CloudPOS%20V2.1.2.0.25110401.exe?version=1768428000516" class="download-card">
-                            <span class="card-icon">🪟</span>
-                            <span class="card-title">Windows收银</span>
-                            <span class="card-version">v2.1.2</span>
-                        </a>
-                        <a href="https://yunfan-store.kemai.com.cn/download/BalanceSetup/BalanceSetup.1.9.8.msi" class="download-card">
-                            <span class="card-icon">⚖️</span>
-                            <span class="card-title">传秤工具</span>
-                            <span class="card-version">v1.9.8</span>
-                        </a>
-                        <a href="https://yunfan-store.kemai.com.cn/download/PriceTagSetup/PriceTagSetup.2.0.2.msi" class="download-card">
-                            <span class="card-icon">🏷️</span>
-                            <span class="card-title">价签打印</span>
-                            <span class="card-version">v2.0.2</span>
-                        </a>
-                    </div>
                 </div>
 
                 <!-- 惠管家 -->
@@ -189,8 +195,44 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 软件下载中心 | 如有问题请联系技术支持</p>
+            <p>&copy; 2026 收银相关软件下载中心 | 如有问题请联系技术支持</p>
         </footer>
     </div>
+
+    <script>
+        // 主题切换功能
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = themeToggle.querySelector('.theme-icon');
+        const html = document.documentElement;
+
+        // 检查本地存储的主题设置
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+            updateThemeIcon(savedTheme);
+        } else {
+            // 根据时间自动切换主题
+            const hour = new Date().getHours();
+            const isDayTime = hour >= 6 && hour < 18;
+            const theme = isDayTime ? 'light' : 'dark';
+            html.setAttribute('data-theme', theme);
+            updateThemeIcon(theme);
+        }
+
+        // 切换主题
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        // 更新主题图标
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    </script>
 </body>
 </html>
