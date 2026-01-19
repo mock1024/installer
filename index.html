@@ -13,7 +13,7 @@
     </button>
     <div class="container">
         <header>
-            <h1>
+            <h1 id="headerLink" style="cursor: pointer;" title="点击三次进入开发者链接">
                 <span class="header-icon">📥</span>
                 <span class="header-text">软件下载中心</span>
             </h1>
@@ -343,17 +343,17 @@
         </main>
 
         <footer>
-            <p id="footerLink" style="cursor: pointer;">&copy; 2026 收银相关软件下载中心 | 如有问题请联系技术支持</p>
+            <p>&copy; 2026 收银相关软件下载中心 | 如有问题请联系技术支持</p>
         </footer>
 
         <script>
-            // Footer 点击三次跳转功能
+            // 头部标题点击三次跳转功能
             (function() {
                 let clickCount = 0;
                 let clickTimer = null;
-                const footerLink = document.getElementById('footerLink');
+                const headerLink = document.getElementById('headerLink');
 
-                footerLink.addEventListener('click', function() {
+                headerLink.addEventListener('click', function() {
                     clickCount++;
 
                     // 清除之前的定时器
