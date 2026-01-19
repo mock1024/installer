@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>胖柚价签施工流程</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .process-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .process-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .process-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .process-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .process-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .process-section h2 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .process-section h3 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin: 1.5rem 0 1rem;
+            padding-left: 0.5rem;
+        }
+
+        .process-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .process-section ul, .process-section ol {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .process-section li {
+            margin-bottom: 0.75rem;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            line-height: 1.5rem;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border-left: 4px solid #f59e0b;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .warning-box p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .process-container {
+                padding: 1rem;
+            }
+
+            .process-section {
+                padding: 1.5rem;
+            }
+
+            .process-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <div class="process-container">
+        <a href="index.html" class="back-link">
+            ← 返回下载中心
+        </a>
+
+        <div class="process-header">
+            <h1>📋 胖柚价签施工流程</h1>
+            <p class="process-meta">版本：最新版 | 更新日期：2023-03-03</p>
+        </div>
+
+        <!-- 一、施工前准备 -->
+        <div class="process-section">
+            <h2>一、施工前准备</h2>
+
+            <h3>1.1 工具准备</h3>
+            <ul>
+                <li><span class="step-number">1</span>笔记本电脑或台式电脑（Windows系统）</li>
+                <li><span class="step-number">2</span>网线（确保网络连接稳定）</li>
+                <li><span class="step-number">3</span>电子价签设备（基站 + 价签）</li>
+                <li><span class="step-number">4</span>USB转串口线（如需要）</li>
+                <li><span class="step-number">5</span>螺丝刀等安装工具</li>
+            </ul>
+
+            <h3>1.2 软件准备</h3>
+            <ul>
+                <li><span class="step-number">1</span>胖柚上位机软件（已提供下载）</li>
+                <li><span class="step-number">2</span>驱动程序（USB驱动等）</li>
+                <li><span class="step-number">3</span>收银系统账号权限</li>
+            </ul>
+
+            <div class="warning-box">
+                <p><strong>⚠️ 注意：</strong>施工前请确保收银系统已正常运行，且具备管理员权限。</p>
+            </div>
+        </div>
+
+        <!-- 二、基站安装与配置 -->
+        <div class="process-section">
+            <h2>二、基站安装与配置</h2>
+
+            <h3>2.1 基站安装位置选择</h3>
+            <ul>
+                <li><span class="step-number">1</span>选择店铺中心位置，确保信号覆盖全店</li>
+                <li><span class="step-number">2</span>避免被金属货架、大型设备遮挡</li>
+                <li><span class="step-number">3</span>靠近电源插座和网络接口</li>
+                <li><span class="step-number">4</span>安装高度建议：2-3米（避免顾客触碰）</li>
+            </ul>
+
+            <h3>2.2 基站连接步骤</h3>
+            <ol>
+                <li>将基站固定在选定位置</li>
+                <li>连接电源适配器，确认电源指示灯亮起</li>
+                <li>使用网线连接基站到路由器</li>
+                <li>观察基站信号灯状态（正常为绿色常亮）</li>
+            </ol>
+
+            <h3>2.3 基站参数配置</h3>
+            <ul>
+                <li><span class="step-number">1</span>记录基站MAC地址（标签背面）</li>
+                <li><span class="step-number">2</span>在上位机软件中添加基站信息</li>
+                <li><span class="step-number">3</span>配置基站ID和通信参数</li>
+                <li><span class="step-number">4</span>测试基站连接状态</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>💡 提示：</strong>一个基站最多可支持500-1000个价签，大型店铺可能需要多个基站。</p>
+            </div>
+        </div>
+
+        <!-- 三、价签安装与绑定 -->
+        <div class="process-section">
+            <h2>三、价签安装与绑定</h2>
+
+            <h3>3.1 价签激活</h3>
+            <ol>
+                <li>从包装中取出价签，拔掉绝缘片</li>
+                <li>等待价签屏幕亮起并显示默认画面</li>
+                <li>确认价签电量充足（屏幕显示清晰）</li>
+            </ol>
+
+            <h3>3.2 价签与商品绑定</h3>
+            <ul>
+                <li><span class="step-number">1</span>在上位机软件中选择"价签管理"</li>
+                <li><span class="step-number">2</span>扫描价签条形码或手动输入价签ID</li>
+                <li><span class="step-number">3</span>选择对应商品进行绑定</li>
+                <li><span class="step-number">4</span>确认绑定信息无误后保存</li>
+            </ul>
+
+            <h3>3.3 价签物理安装</h3>
+            <ol>
+                <li>使用配套支架将价签固定在货架边缘</li>
+                <li>确保价签屏幕朝向顾客通道，便于查看</li>
+                <li>调整角度，避免反光影响显示效果</li>
+                <li>检查安装牢固性，防止掉落</li>
+            </ol>
+
+            <div class="warning-box">
+                <p><strong>⚠️ 注意：</strong>安装时请避免用力过猛导致价签损坏，轻拿轻放。</p>
+            </div>
+        </div>
+
+        <!-- 四、数据同步与测试 -->
+        <div class="process-section">
+            <h2>四、数据同步与测试</h2>
+
+            <h3>4.1 上传商品数据</h3>
+            <ul>
+                <li><span class="step-number">1</span>在收银系统中导出商品数据</li>
+                <li><span class="step-number">2</span>使用"电子标签数据上传工具"导入数据</li>
+                <li><span class="step-number">3</span>检查数据格式和完整性</li>
+                <li><span class="step-number">4</span>执行数据上传操作</li>
+            </ul>
+
+            <h3>4.2 价签内容更新</h3>
+            <ol>
+                <li>在上位机软件中选择需要更新的价签</li>
+                <li>点击"发送"或"刷新"按钮</li>
+                <li>观察价签屏幕是否正常更新</li>
+                <li>确认商品名称、价格等信息显示正确</li>
+            </ol>
+
+            <h3>4.3 功能测试</h3>
+            <ul>
+                <li><span class="step-number">1</span>测试价格修改：在系统中修改商品价格，观察价签是否自动更新</li>
+                <li><span class="step-number">2</span>测试刷新速度：检查价签响应时间（通常5-15秒）</li>
+                <li><span class="step-number">3</span>测试信号覆盖：在店铺各处检查价签连接状态</li>
+                <li><span class="step-number">4</span>测试断电恢复：短暂断电后检查价签是否能自动恢复</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>💡 提示：</strong>首次更新可能需要较长时间，请耐心等待。后续更新速度会明显提升。</p>
+            </div>
+        </div>
+
+        <!-- 五、常见问题处理 -->
+        <div class="process-section">
+            <h2>五、常见问题处理</h2>
+
+            <h3>5.1 价签无响应</h3>
+            <ul>
+                <li><strong>原因：</strong>电量不足、信号弱、未正确绑定</li>
+                <li><strong>解决：</strong>更换电池、调整基站位置、重新绑定</li>
+            </ul>
+
+            <h3>5.2 价格更新失败</h3>
+            <ul>
+                <li><strong>原因：</strong>网络中断、基站故障、软件配置错误</li>
+                <li><strong>解决：</strong>检查网络连接、重启基站、检查配置参数</li>
+            </ul>
+
+            <h3>5.3 显示模糊或闪烁</h3>
+            <ul>
+                <li><strong>原因：</strong>电量不足、屏幕损坏、干扰信号</li>
+                <li><strong>解决：</strong>更换电池、更换价签、远离干扰源</li>
+            </ul>
+
+            <h3>5.4 无法连接基站</h3>
+            <ul>
+                <li><strong>原因：</strong>IP地址冲突、防火墙阻止、网线故障</li>
+                <li><strong>解决：</strong>重新配置IP、关闭防火墙、更换网线</li>
+            </ul>
+        </div>
+
+        <!-- 六、日常维护 -->
+        <div class="process-section">
+            <h2>六、日常维护</h2>
+
+            <h3>6.1 定期检查</h3>
+            <ul>
+                <li><span class="step-number">1</span>每月检查价签电量显示</li>
+                <li><span class="step-number">2</span>定期检查基站工作状态</li>
+                <li><span class="step-number">3</span>确认价签与商品对应关系正确</li>
+                <li><span class="step-number">4</span>检查网络连接稳定性</li>
+            </ul>
+
+            <h3>6.2 电池更换</h3>
+            <ul>
+                <li>常规电池寿命：2-5年（取决于刷新频率）</li>
+                <li>低电量警告：屏幕会显示电量不足图标</li>
+                <li>更换时请使用相同型号的电池</li>
+                <li>更换后需重新激活价签</li>
+            </ul>
+
+            <h3>6.3 软件更新</h3>
+            <ul>
+                <li>定期检查上位机软件版本</li>
+                <li>及时安装官方发布的更新补丁</li>
+                <li>更新前建议备份当前配置</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>💡 提示：</strong>建立维护日志，记录每次检查和更换情况，便于追踪问题。</p>
+            </div>
+        </div>
+
+        <!-- 七、技术支持 -->
+        <div class="process-section">
+            <h2>七、技术支持</h2>
+
+            <h3>7.1 联系方式</h3>
+            <ul>
+                <li><strong>技术支持热线：</strong>400-XXX-XXXX</li>
+                <li><strong>在线支持：</strong>访问官方网站获取帮助</li>
+                <li><strong>邮箱支持：</strong>support@example.com</li>
+            </ul>
+
+            <h3>7.2 相关下载</h3>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                <a href="software/价签部署流程说明（最新版230303）.docx" class="download-btn">
+                    📄 下载完整Word文档
+                </a>
+                <a href="index.html" class="download-btn">
+                    📥 返回下载中心
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 胖柚价签施工流程说明 | 如有问题请联系技术支持</p>
+        </footer>
+    </div>
+
+    <script>
+        // 立即执行主题设置,避免闪烁
+        (function() {
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                html.setAttribute('data-theme', savedTheme);
+            } else {
+                // 根据时间自动切换主题
+                const hour = new Date().getHours();
+                const isDayTime = hour >= 6 && hour < 18;
+                const theme = isDayTime ? 'light' : 'dark';
+                html.setAttribute('data-theme', theme);
+            }
+        })();
+
+        // 主题切换功能
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            const html = document.documentElement;
+
+            // 更新主题图标
+            function updateThemeIcon(theme) {
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            // 初始化图标
+            const currentTheme = html.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(currentTheme);
+
+            // 切换主题
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        });
+    </script>
+</body>
+</html>
