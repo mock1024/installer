@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者链接</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .developer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .developer-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .developer-header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(59, 130, 246, 0.2);
+            transform: translateX(-5px);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin: 2rem 0 1.5rem;
+            padding-left: 0.5rem;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .developer-container {
+                padding: 1rem;
+            }
+
+            .developer-header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <div class="developer-container">
+        <a href="index.html" class="back-link">
+            ← 返回下载中心
+        </a>
+
+        <div class="developer-header">
+            <h1>🔗 开发者链接</h1>
+            <p style="color: var(--text-secondary);">常用开发平台与接口文档</p>
+        </div>
+
+        <main>
+            <!-- 必诚付 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">💳</span>
+                    <h2>必诚付</h2>
+                </div>
+                <div class="download-grid">
+                    <a href="https://test.bichengpay.com" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🧪</span>
+                        <span class="card-title">测试中台</span>
+                        <span class="card-version">test.bichengpay</span>
+                    </a>
+                    <a href="https://www.bichengpay.com" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🏢</span>
+                        <span class="card-title">中台</span>
+                        <span class="card-version">bichengpay</span>
+                    </a>
+                    <a href="https://s.apifox.cn/dd85a5d9-7888-4332-b591-f3d9f28256d7/api-167131988" class="download-card external-link" target="_blank">
+                        <span class="card-icon">📄</span>
+                        <span class="card-title">接口文档</span>
+                        <span class="card-version">Apifox</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 支付接口 -->
+            <section class="category">
+                <div class="category-header">
+                    <span class="category-icon">💰</span>
+                    <h2>支付接口</h2>
+                </div>
+                <div class="download-grid">
+                    <a href="https://paas.huifu.com/open/doc/api/#/shgl/shjj/api_shjj_qyshjbxxrz_kyc" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🔵</span>
+                        <span class="card-title">汇付</span>
+                        <span class="card-version">huifu.com</span>
+                    </a>
+                    <a href="https://open.yeepay.com/docs/products/fwssfk/quick-start/5fc703f496818f001b300bcd" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🟢</span>
+                        <span class="card-title">易宝</span>
+                        <span class="card-version">yeepay.com</span>
+                    </a>
+                    <a href="http://39.106.84.215:8181/docs/saas/saas-1fdsisa23tp3f" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🔴</span>
+                        <span class="card-title">海科融通</span>
+                        <span class="card-version">内部文档</span>
+                    </a>
+                    <a href="https://docs.msfpay.com/docs/ztkx-cas" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🟡</span>
+                        <span class="card-title">中投科信</span>
+                        <span class="card-version">msfpay.com</span>
+                    </a>
+                    <a href="https://docs.shengpay.com/%E8%81%9A%E5%90%88%E6%94%AF%E4%BB%98/%E7%9B%9B%E4%BB%98%E9%80%9A%E8%81%9A%E5%90%88%E6%94%AF%E4%BB%98/%E4%BB%98%E6%AC%BE%E7%A0%81%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3/" class="download-card external-link" target="_blank">
+                        <span class="card-icon">🟣</span>
+                        <span class="card-title">盛付通</span>
+                        <span class="card-version">shengpay.com</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 开发者链接中心 | 如有问题请联系技术支持</p>
+        </footer>
+    </div>
+
+    <script>
+        // 立即执行主题设置,避免闪烁
+        (function() {
+            const html = document.documentElement;
+            const savedTheme = localStorage.getItem('theme');
+
+            if (savedTheme) {
+                html.setAttribute('data-theme', savedTheme);
+            } else {
+                // 根据时间自动切换主题
+                const hour = new Date().getHours();
+                const isDayTime = hour >= 6 && hour < 18;
+                const theme = isDayTime ? 'light' : 'dark';
+                html.setAttribute('data-theme', theme);
+            }
+        })();
+
+        // 主题切换功能
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('themeToggle');
+            const themeIcon = themeToggle.querySelector('.theme-icon');
+            const html = document.documentElement;
+
+            // 更新主题图标
+            function updateThemeIcon(theme) {
+                themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+            }
+
+            // 初始化图标
+            const currentTheme = html.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(currentTheme);
+
+            // 切换主题
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -343,8 +343,37 @@
         </main>
 
         <footer>
-            <p>&copy; 2026 收银相关软件下载中心 | 如有问题请联系技术支持</p>
+            <p id="footerLink" style="cursor: pointer;">&copy; 2026 收银相关软件下载中心 | 如有问题请联系技术支持</p>
         </footer>
+
+        <script>
+            // Footer 点击三次跳转功能
+            (function() {
+                let clickCount = 0;
+                let clickTimer = null;
+                const footerLink = document.getElementById('footerLink');
+
+                footerLink.addEventListener('click', function() {
+                    clickCount++;
+
+                    // 清除之前的定时器
+                    if (clickTimer) {
+                        clearTimeout(clickTimer);
+                    }
+
+                    // 设置新的定时器，2秒后重置计数
+                    clickTimer = setTimeout(function() {
+                        clickCount = 0;
+                    }, 2000);
+
+                    // 点击三次时跳转
+                    if (clickCount === 3) {
+                        window.location.href = 'developer-links.html';
+                        clickCount = 0; // 重置计数
+                    }
+                });
+            })();
+        </script>
     </div>
 
     <script>
